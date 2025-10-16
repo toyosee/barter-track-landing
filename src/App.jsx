@@ -7,7 +7,11 @@ import {
   FaFileAlt,
   FaMobileAlt,
   FaBrain,
-  FaCheckCircle
+  FaCheckCircle,
+  FaTwitter,
+  FaLinkedin,
+  FaInstagram,
+  FaFacebook
 } from 'react-icons/fa';
 
 import { useEffect } from 'react';
@@ -48,12 +52,12 @@ export default function App() {
           <h1 className="text-2xl font-bold text-[#152d56]"><a href="/">BarterTrack</a></h1>
         </div>
         <div className="space-x-6 hidden md:flex">
-          <a href="#" className="hover:text-indigo-900 transition">Home</a>
-          <a href="#about" className="hover:text-indigo-900 transition">About</a>
-          <a href="#features" className="hover:text-indigo-900 transition">Features</a>
-          <a href="#contact" className="hover:text-indigo-900 transition">Contact</a>
+          <a href="#" className="hover:text-yellow-500 transition">Home</a>
+          <a href="#about" className="hover:text-yellow-500 transition">About</a>
+          <a href="#features" className="hover:text-yellow-500 transition">Features</a>
+          <a href="#contact" className="hover:text-yellow-500 transition">Contact</a>
         </div>
-        <a href="#contact" className="bg-[#152d56] text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+        <a href="#contact" className="bg-[#152d56] text-white px-4 py-2 rounded-md hover:bg-yellow-400 hover:text-[#152d56] transition">
           Get Started
         </a>
       </nav>
@@ -72,7 +76,7 @@ export default function App() {
           <p className="text-lg text-gray-700">
             BarterTrack is an AI-powered attendance platform that not only automates tracking but also predicts student performance and determines exam eligibility in real time — all deployed securely on-premise.
           </p>
-          <a href="#contact" className="bg-[#152d56] text-white px-6 py-3 rounded-md shadow hover:bg-indigo-700 transition">
+          <a href="#contact" className="bg-[#152d56] text-white px-6 py-3 rounded-md shadow hover:bg-yellow-400 hover:text-[#152d56] transition">
             Request a Demo
           </a>
         </div>
@@ -183,8 +187,43 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="text-center py-6 bg-[#152d56] text-white">
-        <p>© {new Date().getFullYear()} BarterTrack. By Barterverse.</p>
+      <footer className="bg-[#152d56] text-white py-10 px-6 md:px-20">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+          {/* Branding */}
+          <div>
+            <h4 className="text-xl font-bold mb-2">BarterTrack</h4>
+            <p className="text-sm">© {new Date().getFullYear()} BarterTrack. By Barterverse.</p>
+          </div>
+
+          {/* Navigation */}
+          <div>
+            <h5 className="font-semibold mb-2">Explore</h5>
+            <ul className="space-y-1 text-sm">
+              <li><a href="#about" className="hover:underline">About</a></li>
+              <li><a href="#features" className="hover:underline">Features</a></li>
+              <li><a href="#contact" className="hover:underline">Contact</a></li>
+            </ul>
+          </div>
+
+          {/* Social Icons */}
+          <div>
+            <h5 className="font-semibold mb-2">Connect</h5>
+            <div className="flex justify-center md:justify-start gap-4 text-xl">
+              <a href="" target="_blank" rel="noopener noreferrer">
+                <FaTwitter className="hover:text-yellow-400 transition" />
+              </a>
+              <a href="https://www.linkedin.com/in/elijahabolaji/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="hover:text-yellow-400 transition" />
+              </a>
+              <a href="" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="hover:text-yellow-400 transition" />
+              </a>
+              <a href="" target="_blank" rel="noopener noreferrer">
+                <FaFacebook className="hover:text-yellow-400 transition" />
+              </a>
+            </div>
+          </div>
+        </div>
       </footer>
 
       <CTAPopup/>
