@@ -6,7 +6,8 @@ import {
   FaEnvelope,
   FaSchool,
   FaCommentDots,
-  FaPaperPlane
+  FaPaperPlane,
+  FaAddressCard
 } from 'react-icons/fa';
 
 function ContactForm() {
@@ -66,10 +67,16 @@ function ContactForm() {
         <input type="email" name="email" placeholder="Email Address" required className="w-full outline-none" />
       </div>
 
-      {/* School */}
+      {/* School Name */}
       <div className="flex items-center border border-gray-300 rounded-md px-4 py-2">
         <FaSchool className="text-[#152d56] mr-3" />
         <input type="text" name="school" placeholder="School Name" required className="w-full outline-none" />
+      </div>
+
+      {/* School Address */}
+      <div className="flex items-center border border-gray-300 rounded-md px-4 py-2">
+        <FaAddressCard className="text-[#152d56] mr-3" />
+        <input type="text" name="address" placeholder="School Address" required className="w-full outline-none" />
       </div>
 
       {/* Message */}
